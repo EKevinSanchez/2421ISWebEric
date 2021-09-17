@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .tabla{
+        border: 1px solid rgb(21, 116, 224);
+        border-collapse: collapse;
+        margin: 0 auto;
+        width: 50%;
+    }
+    .tabla td{
+        border: 1px solid rgb(21, 116, 224);
+        color: darkmagentas
+    }
+</style>
+<body>
+    
+    <table class="tabla">
+        <thead>
+            <tr>
+                <th>num 1</th>
+                <th>operacion</th>
+                <th>num 2</th>
+                <th>Accion</th>
+                <th>Resultado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="text" name="num1" id="num1" placeholder="primer numero"></td>
+                <td><select name="operacion" id="operacion">
+                    <option value= 1 >Suma</option>
+                    <option value= 2 >Resta</option>
+                    <option value= 3 >Multiplicacion</option>
+                    <option value= 4 >Division</option>
+                </select></td>
+                <td><input type="text" name="num2" id="num2" placeholder="segundo numero"></td>
+                <td><button onclick="calcular()" id="calcular">calcular</button></td>
+                <td><input type="text" name="resultado" id="resultado"></td>
+            </tr>
+            <tr>
+                
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+<script src="array.js"></script>
+</html>
