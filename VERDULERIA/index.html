@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verduleria la Bellota</title>
+    <link rel="shortcut icon" href="/iconos/favicon.ico">
+    <link rel="stylesheet" href="estilos.css">
+    <script src="main.js"></script>
+    
+</head>
+<body>
+    <body>
+    <header id="main-header">
+        <h1>Verduleria la Bellota 🍎🍌</h1>
+        <nav> 
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#tienda">Tienda</a></li>
+                <li><a href="#carrito">Carrito</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="inicio">
+        <div class="bienvenida">
+            <div class="texto">
+                <h2>☆ BIENVENIDOS ☆</h2>
+                <p>Recuerda que la Verduleria Bellota siempre esta para ti •ᴗ•</p>
+            </div>
+        </div>
+    </div>
+
+        <table id="productos">
+            <div class="contenedor-titulo">
+                <p id="tienda" class="titulo">Tienda</p>
+            </div>
+
+                <tr>
+                <th>#</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th>Agregar</tha> 
+            </tr>
+            <tr class="Primera">
+                <td>1</td>
+                <td id = "producto1">Manzana 🍎</td>
+                <td id = "precio1">$59.00</td>
+                <td id = "peso1">1Kg</td>
+                <td class="button"><input type="button" value="Añadir" id="añadir" onclick="agregarProducto1()"></td>
+            </tr>
+            <tr class="Segunda">
+                <td>2</td>
+                <td id = "producto2">Sandia 🍉</td>
+                <td id = "precio2">$13.00</td>
+                <td>1kg</td>
+                <td class="button"><input type="button" value="Añadir" id="añadir" onclick="agregarProducto2()"></td>
+            </tr>
+                <tr class="Tercera">
+                    <td>3</td>
+                    <td id = "producto3">Platano🍌</td>
+                    <td id = "precio3">$17.00</td>
+                    <td>1Kg</td>
+                    <td class="button"><input type="button" value="Añadir" id="añadir" onclick="agregarProducto3()"></td>
+                </tr>
+            <tr class="Cuarta">
+                <td>4</td>
+                <td id = "producto4">Melon🍈</td>
+                <td id = "precio4">$25.00</td>
+                <td>1kg</td>
+                <td class="button"><input type="button" value="Añadir" id="añadir" onclick="agregarProducto4()"></td>
+            </tr>
+            <tr class="Quinta">
+                <td>5</td>
+                <td id = "producto5">Mango🥭</td>
+                <td id = "precio5">$43.00</td>
+                <td>1kg</td>
+                <td class="button"><input type="button" value="Añadir" id="añadir" onclick="agregarProducto5()"></input></td>
+            </tr>   
+        </table>
+    
+    <br>
+
+    <div id="carrito" class="contenedor-titulo">
+        <p class="titulo">Carrito</p>
+    </div>
+    
+    <table id = "tablaProductos">
+        <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+        </tr>
+    </table>
+    <br>
+    <table id = "total">
+        <tr>
+            <th>TOTAL</th>
+        </tr>
+    </table>
+
+    <br>
+    <div id="contacto" class="contenido">
+        <br>
+        <h3 class="titulo-contacto">Contactanos <span>Ahora</span></h3>
+        
+            <div class="contacto-form">
+                <form action="">
+                    <p>
+                        <label>Nombre completo</label>
+                        <input type="text" name="fullname">
+                    </p>
+                    <p>
+                        <label>Correo electronico</label>
+                        <input type="email" name="email">
+                    </p>
+                    <p>
+                        <label>Numero de telefono</label>
+                        <input type="tel" name="phone">
+                    </p>
+                    <p>
+                        <label>Asunto</label>
+                        <input type="text" name="affair">
+                    </p>
+                    <p class="caja">
+                        <label>Mensaje</label> 
+                        <textarea name="message" rows="3"></textarea>
+                    </p>
+                    <p class="caja">
+                        <button>
+                            Enviar
+                        </button>
+                    </p>
+                </form>
+            </div>
+            <div class="contacto-info">
+                <h4>Más Informacion:</h4>
+                <ul>
+                    <li><i></i> Verduleria Bellota</li>
+                    <li><i></i> (+52) 111 222 333</li>
+                    <li><i></i> verduleria.bellota@outlook.com</li>
+                </ul>
+                <p>Derechos reservados a Verduleria Bellota S.A de C.V</p>
+                <p>verduleriabellota.com</p>
+            </div>
+        
+
+    </div>
+
+</body>
+
+</html>
