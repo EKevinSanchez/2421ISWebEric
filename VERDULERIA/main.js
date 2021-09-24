@@ -1,3 +1,5 @@
+let totales = 0.0;
+
 function  agregarProducto1(){
     event.preventDefault();
     var producto = document.getElementById("producto1").innerHTML;
@@ -9,6 +11,9 @@ function  agregarProducto1(){
     let nuevaRefCelda1 = nuevaFila.insertCell(1);
     nuevaRefCelda1.textContent = precio;
     console.log(producto);
+    var precios = parseFloat(precio.slice(1));
+    totales = totales + precios;
+    console.log(totales);
 }
 function  agregarProducto2(){
     event.preventDefault();
@@ -21,6 +26,9 @@ function  agregarProducto2(){
     let nuevaRefCelda1 = nuevaFila.insertCell(1);
     nuevaRefCelda1.textContent = precio;
     console.log(producto);
+    var precios = parseFloat(precio.slice(1));
+    totales = totales + precios;
+    console.log(totales);
 }
 function  agregarProducto3(){
     event.preventDefault();
@@ -33,6 +41,9 @@ function  agregarProducto3(){
     let nuevaRefCelda1 = nuevaFila.insertCell(1);
     nuevaRefCelda1.textContent = precio;
     console.log(producto);
+    var precios = parseFloat(precio.slice(1));
+    totales = totales + precios;
+    console.log(totales);
 }
 function  agregarProducto4(){
     event.preventDefault();
@@ -45,6 +56,9 @@ function  agregarProducto4(){
     let nuevaRefCelda1 = nuevaFila.insertCell(1);
     nuevaRefCelda1.textContent = precio;
     console.log(producto);
+    var precios = parseFloat(precio.slice(1));
+    totales = totales + precios;
+    console.log(totales);
 }
 function  agregarProducto5(){
     event.preventDefault();
@@ -57,4 +71,12 @@ function  agregarProducto5(){
     let nuevaRefCelda1 = nuevaFila.insertCell(1);
     nuevaRefCelda1.textContent = precio;
     console.log(producto);
+    var precios = parseFloat(precio.slice(1));
+    totales = totales + precios;
+    console.log(totales);
 }
+
+function total() {
+    var mostrar = document.getElementById("mostrarTotal");
+    mostrar.textContent ="Su compra total es de: $"+totales;
+  }

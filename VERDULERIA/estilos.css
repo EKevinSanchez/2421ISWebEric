@@ -226,4 +226,19 @@ ul {
     margin: 0 0 1rem 0;
 }
 
-/* LARGE SIZE */
+/* estilos del boton total */
+#Mostrar{
+    height: 35px;
+    width: 100px;
+    color:whitesmoke;
+    background:#369681;
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#Mostrar:hover{
+    background: white;
+    color: #369681;
+    font-weight: bold;
+}
