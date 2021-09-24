@@ -27,20 +27,11 @@ let filas = 10
       juegoIniciado = false
     }
 
-    function generarTableroHTML() {
+    function generarTableroHTML() {//generacion de tablero visual
       let html = ""
       for (let f = 0; f < filas; f++) {
         html += `<tr>`
         for (let c = 0; c < columnas; c++) {
-          /*
-              Generación de cada uno de los elementos de la matriz
-              y se les asignará una coordenada, para poder tratar estos elementos
-              de forma matemática, siguiendo patrones que fácilitarán la 
-              estructura de algoritmos
-
-              id="celda-${c}-${f}"
-              es la instrucción más importante, asigna una coordenada a cada elemento
-          */
           html += `<td id="celda-${c}-${f}" style="width:${lado}px;height:${lado}px">`
           html += `</td>`
         }
@@ -53,11 +44,7 @@ let filas = 10
       tableroHTML.style.background = "darkcyan"
     }
 
-    /*
-        Una vez generado el tablero HTML se le añaden los eventos de clic
-        a cada una de las celdas para que el usuario pueda interactuar con el juego
-    */
-    function añadirEventos() {
+    function añadirEventos() {//eventos de interacion del usuario
       for (let f = 0; f < filas; f++) {
         for (let c = 0; c < columnas; c++) {
           let celda = document.getElementById(`celda-${c}-${f}`)
@@ -80,7 +67,7 @@ let filas = 10
       refrescarTablero()
     }
 
-    //funciones de clic
+    //funcion de clic
     function clicSimple(celda, c, f, me) {
       if (!enJuego) {
         return //El juego ha finalizado
@@ -93,13 +80,7 @@ let filas = 10
           if (tablero[c][f].estado == "marcado") { //la celda está protegida
             break
           }
-          /*
-              Hay que proteger que la primera jugada no sea justo en una mina
-              para no desmotivar al jugador con un castigo a la primera jugada
-
-              Estimo que no le tomará más de 2 iteraciones en arreglar el problema
-          */
-          while (!juegoIniciado && tablero[c][f].valor == -1) {
+          while (!juegoIniciado && tablero[c][f].valor == -1) {//proteccion de primera juegada
             generarTableroJuego()
           }
           tablero[c][f].estado = "descubierto"
@@ -257,7 +238,6 @@ let filas = 10
           c = Math.floor(Math.random() * columnas) //Genera una columna aleatoria en el tablero
           f = Math.floor(Math.random() * filas) //Genera una fila aleatoria en el tablero
         } while (tablero[c][f]); //Se encarga de verificar que en la celda no haya una mina
-
         tablero[c][f] = {
           valor: -1
         } //Se inserta la mina en celda disponible
